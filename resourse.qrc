@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/stylePen/dash.PNG</file>
+        <file>images/stylePen/solid.PNG</file>
+    </qresource>
+</RCC>

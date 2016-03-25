@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/stylePen/dash.PNG</file>
+        <file>images/stylePen/solid.PNG</file>
+        <file>images/stylePen/dashdot.PNG</file>
+        <file>images/stylePen/dashdotdotline.PNG</file>
+        <file>images/stylePen/dot.PNG</file>
+        <file>images/figure/elipse.PNG</file>
+        <file>images/figure/line.PNG</file>
+        <file>images/figure/rect.PNG</file>
+        <file>images/button/back.png</file>
+        <file>images/button/forward.png</file>
+        <file>images/button/counter.png</file>
+        <file>images/button/counterInside.png</file>
+        <file>images/button/inside.png</file>
+        <file>images/button/rect.png</file>
+        <file>images/button/round.png</file>
+        <file>images/toolBar/figure.png</file>
+        <file>images/toolBar/pencil.png</file>
+        <file>images/toolBar/cursor_drag_hand.png</file>
+        <file>images/toolBar/excrete.png</file>
+        <file>images/button/z1.png</file>
+        <file>images/button/z2.png</file>
+        <file>images/button/z3.png</file>
+        <file>images/toolBar/pipette.png</file>
+    </qresource>
+</RCC>
