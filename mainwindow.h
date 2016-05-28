@@ -3,8 +3,12 @@
 
 #include <QMainWindow>
 #include <QColorDialog>
-
+#include <QFileDialog>
+#include <QBuffer>
+#include <QFontDialog>
+#include "dialogsize.h"
 #include "mygraphicsscene.h"
+#include "dialogtext.h"
 
 
 namespace Ui {
@@ -73,6 +77,16 @@ private slots:
     void on_pushButtonForward_clicked();
 
     void on_actionPepette_triggered();
+
+    void on_actionSave_triggered();
+
+    void on_actionOpen_triggered();
+
+    void on_actionResize_triggered();
+
+    void on_actionText_triggered();
+
+    void on_actionNEw_triggered();
 
 private:
     Ui::MainWindow *ui;

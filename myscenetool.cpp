@@ -35,23 +35,27 @@ void MySceneTool::mouseMoveFigure(QGraphicsSceneMouseEvent *event)
     switch(indextFigure){
         case 0:{
             tempItem =  (QGraphicsItem*)this->addLine(x, y, event->scenePos().x(), event->scenePos().y(), pen);
+            break;
         }
         case 1:{
             tempItem = (QGraphicsItem*)this->addEllipse(x, y, event->scenePos().x() - x, event->scenePos().y() - y, pen, brush);
+            break;
         }
         case 2:{
             tempItem = (QGraphicsItem*)this->addRect(x, y, event->scenePos().x() - x, event->scenePos().y() - y, pen, brush);
+            break;
         }
     }
     history.push_back(tempItem);
     tempItem->setZValue(z);
-    this->update(this->sceneRect());
+    this->update(-1000,-1000, 3000,3000);
 }
 
 void MySceneTool::mouseMoveExcrete(QGraphicsSceneMouseEvent *event)
 {
     this->removeItem(tempItem);
     tempItem = this->addRect(x, y, event->scenePos().x() - x, event->scenePos().y() - y, penExcrete);
+    tempItem->setZValue(4);
 }
 
 void MySceneTool::mousePressArrow()
@@ -75,12 +79,15 @@ void MySceneTool::mousePressFigure(QGraphicsSceneMouseEvent *event)
     switch(indextFigure){
         case 0:{
             history.push_back((QGraphicsItem*)this->addLine(x, y, x, y, pen));
+            break;
         }
         case 1:{
             history.push_back((QGraphicsItem*)this->addEllipse(x, y, 0, 0, pen));
+            break;
         }
         case 2:{
             history.push_back((QGraphicsItem*)this->addRect(x, y, 0, 0, pen));
+            break;
         }
     }
 }
@@ -90,6 +97,24 @@ void MySceneTool::mousePressExcrete(QGraphicsSceneMouseEvent *event)
     x = event->scenePos().x();
     y = event->scenePos().y();
     tempItem = this->addRect(x, y, 0, 0, penExcrete);
+    //this->removeItem(tempItem);
+    //tempItem = this->addRect(x, y, event->scenePos().x() - x, event->scenePos().y() - y, penExcrete);
+}
+
+void MySceneTool::mouseReleaseText(QGraphicsSceneMouseEvent *event)
+{
+    x = event->scenePos().x();
+    y = event->scenePos().y();
+    QGraphicsTextItem *itemText = new QGraphicsTextItem(text);
+    itemText->setPos(x, y);
+    itemText->setFont(font);
+    this->addItem(itemText);
+    history.push_back(itemText);
+    itemText->setFlag(QGraphicsItem::ItemIsSelectable, true);  //////
+    itemText->setZValue(z);
+    this->update(-1000,-1000, 3000,3000);
+    leftMousePress = false;
+    rightMousePress = false;
 }
 
 void MySceneTool::mouseReleasePencil()

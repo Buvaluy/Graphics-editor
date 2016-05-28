@@ -23,5 +23,6 @@
         <file>images/button/z2.png</file>
         <file>images/button/z3.png</file>
         <file>images/toolBar/pipette.png</file>
+        <file>images/toolBar/text.png</file>
     </qresource>
 </RCC>

@@ -23,11 +23,14 @@ public:
     void mousePressPencil(QGraphicsSceneMouseEvent *event);
     void mousePressFigure(QGraphicsSceneMouseEvent *event);
     void mousePressExcrete(QGraphicsSceneMouseEvent *event);
+    void mouseReleaseText(QGraphicsSceneMouseEvent *event);
 
     void mouseReleasePencil();
     void mouseReleaseFigure(QGraphicsSceneMouseEvent *event);
     void mouseReleaseExcrete(QGraphicsSceneMouseEvent *event);
     void mouseReleasePipette(QGraphicsSceneMouseEvent *event);
+
+
 
 protected:
 

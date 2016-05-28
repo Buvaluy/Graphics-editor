@@ -188,7 +188,7 @@
      <x>0</x>
      <y>0</y>
      <width>616</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="cursor">
@@ -198,9 +198,18 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionNEw"/>
     <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+   </widget>
+   <widget class="QMenu" name="menuSize">
+    <property name="title">
+     <string>Size</string>
+    </property>
+    <addaction name="actionResize"/>
    </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuSize"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -214,6 +223,7 @@
    <addaction name="actionFigure"/>
    <addaction name="actionExcrete"/>
    <addaction name="actionPepette"/>
+   <addaction name="actionText"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionOpen">
@@ -264,6 +274,33 @@
    </property>
    <property name="text">
     <string>Pepette</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionResize">
+   <property name="text">
+    <string>Resize</string>
+   </property>
+  </action>
+  <action name="actionText">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/toolBar/text.png</normaloff>:/images/toolBar/text.png</iconset>
+   </property>
+   <property name="text">
+    <string>text</string>
+   </property>
+  </action>
+  <action name="actionNEw">
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="toolTip">
+    <string>New</string>
    </property>
   </action>
  </widget>

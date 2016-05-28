@@ -17,14 +17,20 @@ SOURCES += main.cpp\
     mygraphicsscene.cpp \
     mainwindowinit.cpp \
     mysceneproperties.cpp \
-    myscenetool.cpp
+    myscenetool.cpp \
+    dialogsize.cpp \
+    dialogtext.cpp
 
 HEADERS  += mainwindow.h \
     mygraphicsscene.h \
     mysceneproperties.h \
-    myscenetool.h
+    myscenetool.h \
+    dialogsize.h \
+    dialogtext.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    dialogsize.ui \
+    dialogtext.ui
 
 RESOURCES += \
     res.qrc

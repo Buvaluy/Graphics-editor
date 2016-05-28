@@ -14,6 +14,7 @@
 #include <QPushButton>
 #include <QApplication>
 #include <QDesktopWidget>
+#include <QTextItem>
 
 using namespace std;
 
@@ -26,6 +27,7 @@ public:
     void setTool(const int tool);
     void setSizePen(const int size);
     void setStylePen();
+    void setFont(const QFont &font);
     void setColorPen1(const QColor color);
     void setColorPen2(const QColor color);
     void setIndexStyle(const int index);
@@ -37,6 +39,7 @@ public:
     void setZ(int value);
     void setButtonBackForward(QPushButton *pb, QPushButton *pf);
     void setButtonColor(QPushButton *pbc1, QPushButton *pbc2);
+    void setText(QString text);
 
 protected:
     int tool;
@@ -55,6 +58,9 @@ protected:
     QPen penExcrete;
     QPen pen;
     QBrush brush;
+    QFont font;
+
+    QString text;
 
     QPushButton *pb, *pf;
     QPushButton *pbc1, *pbc2;

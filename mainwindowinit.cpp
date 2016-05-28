@@ -115,6 +115,13 @@ void MainWindow::buttonMode(int tool)
         this->setCursor(QCursor(Qt::CrossCursor));
         return;
     }
+    case 5: { // text
+        this->actionToolEnable();
+        ui->actionText->setEnabled(false);
+        this->comboBoxFigureHide();
+        this->setCursor(QCursor(Qt::IBeamCursor));
+        return;
+    }
     }
     QPainterPath pp;
     pp.addRect(0, 0, 0, 0);
@@ -136,4 +143,5 @@ void MainWindow::actionToolEnable()
     ui->actionExcrete->setEnabled(true);
     ui->actionArrow->setEnabled(true);
     ui->actionPepette->setEnabled(true);
+    ui->actionText->setEnabled(true);
 }

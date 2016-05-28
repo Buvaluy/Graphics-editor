@@ -40,6 +40,8 @@ void MyGraphicsScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
         pen = pen1;
     }else if(rightMousePress){
         pen = pen2;
+    }else{
+        return;
     }
 
     switch(tool){
@@ -60,6 +62,7 @@ void MyGraphicsScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
         break;
     }
     }
+
     this->update(this->sceneRect());
 }
 
@@ -88,8 +91,13 @@ void MyGraphicsScene::mousePressEvent(QGraphicsSceneMouseEvent  *event)
         this->mousePressExcrete(event);
         break;
     }
+//    case 5:{
+//        this->mousePressText(event);
+//        break;
+//    }
     }
-    this->update(this->sceneRect());
+   // this->update(this->sceneRect());
+    this->update(-1000,-1000, 3000,3000);
 }
 
 void MyGraphicsScene::mouseReleaseEvent(QGraphicsSceneMouseEvent  *event)
@@ -116,12 +124,18 @@ void MyGraphicsScene::mouseReleaseEvent(QGraphicsSceneMouseEvent  *event)
         this->mouseReleasePipette(event);
         break;
     }
+    case 5:{
+        this->mouseReleaseText(event);
+        break;
+    }
+    //default: {break;}
     }
     if(history.size() > 0)
         pb->setEnabled(true);
     leftMousePress = false;
     rightMousePress = false;
     this->update(this->sceneRect());
+
 }
 
 

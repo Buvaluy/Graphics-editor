@@ -24,6 +24,11 @@ void MySceneProperties::setStylePen()
     }
 }
 
+void MySceneProperties::setFont(const QFont &font)
+{
+    this->font = font;
+}
+
 void MySceneProperties::setColorPen1(const QColor color)
 {
     pen1.setColor(color);
@@ -122,4 +127,9 @@ void MySceneProperties::setButtonColor(QPushButton *pbc1, QPushButton *pbc2)
 {
     this->pbc1 = pbc1;
     this->pbc2 = pbc2;
+}
+
+void MySceneProperties::setText(QString text)
+{
+    this->text = text;
 }
